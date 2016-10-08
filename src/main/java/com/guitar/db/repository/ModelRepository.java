@@ -76,11 +76,7 @@ public class ModelRepository {
 	 * NamedQuery finder
 	 */
 	public List<Model> getModelsByType(String modelType) {
-		@SuppressWarnings("unchecked")
-		List<Model> mods = entityManager
-				.createNamedQuery("Model.findAllModelsByType")
-				.setParameter("name", modelType).getResultList();
-		return mods;
+		return modelJpaRepository.findAllModelsByType(modelType);
 	}
 
 	/**
