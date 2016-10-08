@@ -21,6 +21,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.guitar.db.model.Model;
 import com.guitar.db.repository.ModelJpaRepository;
+import com.guitar.db.repository.ModelJpaRepositoryImpl;
 import com.guitar.db.repository.ModelRepository;
 
 @ContextConfiguration(locations={"classpath:com/guitar/db/applicationTests-context.xml"})
@@ -56,6 +57,8 @@ public class ModelPersistenceTests {
 		
 		//delete BC location now
 		modelRepository.delete(otherModel);
+		
+		modelJpaRepository.aCustomMethod();
 	}
 
 	@Test
