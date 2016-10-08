@@ -77,8 +77,8 @@ public class LocationPersistenceTests {
 	}
 
 	@Test
-	public void testFindWithLikeJpa() throws Exception {
-		List<Location> locs = locationJpaRepository.findByStateLike("New%");
+	public void testFindWithStartingWithJpa() throws Exception {
+		List<Location> locs = locationJpaRepository.findByStateStartingWith("New");
 		assertEquals(4, locs.size());
 	}
 	@Test
