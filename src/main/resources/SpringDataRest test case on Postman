@@ -21,3 +21,15 @@ http://localhost:8080/api/manufacturers/3
 
 DELETE
 http://localhost:8080/api/manufacturers/3
+
+When having projection:
+@Projection(name="modelDetail", types={Model.class})
+GET
+http://localhost:8080/api/models?projection=modelDetail
+
+When having projection:
+@Projection(name="modelDetailView", types={Model.class})
+GET
+http://localhost:8080/api/models?projection=modelDetailView 
+to get detail with customized name of modelname
+
