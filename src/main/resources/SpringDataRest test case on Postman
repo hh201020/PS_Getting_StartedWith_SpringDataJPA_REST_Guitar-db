@@ -1,0 +1,23 @@
+With Spring Data REST, many restful APIs are provided right then
+
+GET
+http://localhost:8080/api/manufacturers
+
+POST
+http://localhost:8080/api/manufacturers
+{
+	"name":"C.F. Martin & Company",
+	"foundedDate":"1992-01-01T12:00:00.000+0000",
+	"averageYearlySales":300000,
+	"active":true
+}
+
+PATCH
+http://localhost:8080/api/manufacturers/3
+{
+	"averageYearSales":8000000
+}
+
+
+DELETE
+http://localhost:8080/api/manufacturers/3
