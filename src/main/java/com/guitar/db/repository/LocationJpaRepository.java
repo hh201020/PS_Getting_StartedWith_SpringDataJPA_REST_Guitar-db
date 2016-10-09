@@ -3,9 +3,11 @@ package com.guitar.db.repository;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import com.guitar.db.model.Location;
 
+@RepositoryRestResource(exported=false)
 public interface LocationJpaRepository extends JpaRepository<Location, Long> {
 	List<Location> findByStateStartingWith(String stateName);
 	Location findFirstByStateIgnoreCaseStartingWith(String stateName);
